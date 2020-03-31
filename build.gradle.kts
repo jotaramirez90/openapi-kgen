@@ -1,11 +1,8 @@
-import com.jfrog.bintray.gradle.BintrayExtension
-
 plugins {
     java
     kotlin("jvm") version V.KOTLIN
     id("signing")
     id("maven-publish")
-    id("com.jfrog.bintray") version V.BINTRAY apply false
 }
 
 allprojects {
@@ -44,7 +41,6 @@ allprojects {
 subprojects {
     apply {
         plugin("maven-publish")
-        plugin("com.jfrog.bintray")
     }
     publishing {
         publications {
@@ -67,28 +63,5 @@ subprojects {
                 pom(BuildConfig.pomAction)
             }
         }
-    }
-
-    configure<BintrayExtension> {
-        val bintrayUser: String by project
-        val bintrayApiKey: String by project
-
-        user = bintrayUser
-        key = bintrayApiKey
-
-        setPublications("maven")
-
-        pkg(delegateClosureOf<BintrayExtension.PackageConfig> {
-            repo = "maven"
-            userOrg = user
-
-            name = "${rootProject.name}:${project.name}"
-            desc = project.description
-
-            setLicenses("Apache-2.0")
-            vcsUrl = "https://github.com/kroegerama/openapi-kgen"
-            setLabels("openapi", "generator", "codegen", "swagger")
-            publicDownloadNumbers = true
-        })
     }
 }

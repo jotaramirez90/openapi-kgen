@@ -32,26 +32,19 @@ class ApiFilesGenerator(
 
     override fun getApiFiles(): List<FileSpec> = analyzer.apis.map { (name, operations) ->
         val apiName = "$name api"
-        val cnHolder = ClassName(options.packageName, "ApiHolder")
         prepareFileSpec(options.apiPackage, apiName.asClassFileName()) {
             val className = ClassName(options.apiPackage, apiName.asTypeName())
             val apiInterface = poetInterface(className) {
-                val companion = TypeSpec.companionObjectBuilder()
-
                 operations.forEach { opInfo ->
-                    handleOperationInfo(cnHolder, className, this@poetInterface, companion, opInfo)
+                    handleOperationInfo(this@poetInterface, opInfo)
                 }
-                addType(companion.build())
             }
             addType(apiInterface)
         }
     }
 
     private fun handleOperationInfo(
-        cnHolder: ClassName,
-        apiClassName: ClassName,
         apiInterface: TypeSpec.Builder,
-        companion: TypeSpec.Builder,
         operationInfo: OperationWithInfo
     ) {
         val funName = operationInfo.createOperationName().asFunctionName()
@@ -61,8 +54,9 @@ class ApiFilesGenerator(
         val baseParameters = collectParameters(operationInfo)
         val additionalParams = request?.let { getAdditionalParameters(it) }.orEmpty()
 
-        val ifaceFun = poetFunSpec("__$funName") {
-            val methodAnnotation = createHttpMethodAnnotation(operationInfo.method, operationInfo.path)
+        val ifaceFun = poetFunSpec("$funName") {
+            val methodAnnotation =
+                createHttpMethodAnnotation(operationInfo.method, operationInfo.path)
             addAnnotation(methodAnnotation)
 
             if (operationInfo.securityNames.isNotEmpty()) {
@@ -93,25 +87,15 @@ class ApiFilesGenerator(
             addReturns(response, false)
         }
 
-        val delegateFun = poetFunSpec(funName) {
-            addModifiers(KModifier.SUSPEND)
-            addParameters(baseParameters.map { it.delegateParam })
-            addParameters(additionalParams.map { it.delegateParam })
-
-            val paramList = parameters.joinToString(", ") { it.name }
-            addStatement("return %T.getApi<%T>().%L(%L)", cnHolder, apiClassName, "__$funName", paramList)
-
-            addReturns(response, true)
-        }
-
         apiInterface.addFunction(ifaceFun)
-        companion.addFunction(delegateFun)
     }
 
     private fun collectParameters(operationInfo: OperationWithInfo) =
-        operationInfo.operation.parameters.orEmpty().map { parameter ->
-            createParameterSpecPair(parameter)
-        }
+        operationInfo.operation.parameters.orEmpty()
+            .filter { it.name.asFieldName() != "accessToken" }
+            .map { parameter ->
+                createParameterSpecPair(parameter)
+            }
 
     private fun createParameterSpecPair(parameter: Parameter): ParameterSpecPair {
         val rawName = parameter.name

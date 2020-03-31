@@ -5,14 +5,12 @@ import com.squareup.kotlinpoet.MemberName
 
 object PoetConstants {
 
-    private const val PKG_MOSHI = "com.squareup.moshi"
+    private const val PKG_GSON = "com.google.gson.annotations"
     private const val PKG_RETROFIT = "retrofit2"
     private const val PKG_RETROFIT_HTTP = "retrofit2.http"
     private const val PKG_OK = "okhttp3"
 
-    val MOSHI_JSON = ClassName(PKG_MOSHI, "Json")
-    val MOSHI_JSON_CLASS = ClassName(PKG_MOSHI, "JsonClass")
-    val MOSHI_BUILDER = ClassName(PKG_MOSHI, "Moshi", "Builder")
+    val GSON_SERIALIZED = ClassName(PKG_GSON, "SerializedName")
 
     val RETROFIT_GET = ClassName(PKG_RETROFIT_HTTP, "GET")
     val RETROFIT_POST = ClassName(PKG_RETROFIT_HTTP, "POST")
@@ -37,27 +35,9 @@ object PoetConstants {
 
     val RETROFIT_RESPONSE = ClassName(PKG_RETROFIT, "Response")
 
-    val RETROFIT = ClassName(PKG_RETROFIT, "Retrofit")
-    val RETROFIT_BUILDER = ClassName(PKG_RETROFIT, "Retrofit", "Builder")
-
-    val RETROFIT_CREATE_FUN = MemberName(PKG_RETROFIT, "create")
-
-    val CONVERTER = ClassName(PKG_RETROFIT, "Converter")
-    val CONVERTER_FACTORY = ClassName(PKG_RETROFIT, "Converter", "Factory")
-
     val OK_REQUEST_BODY = ClassName(PKG_OK, "RequestBody")
     val OK_RESPONSE_BODY = ClassName(PKG_OK, "ResponseBody")
     val OK_MULTIPART_PART = ClassName(PKG_OK, "MultipartBody", "Part")
 
-    val OK_CLIENT = ClassName(PKG_OK, "OkHttpClient")
-    val OK_CLIENT_BUILDER = ClassName(PKG_OK, "OkHttpClient", "Builder")
-
-    val OK_CREDENTIALS = ClassName(PKG_OK, "Credentials")
-    val OK_INTERCEPTOR = ClassName(PKG_OK, "Interceptor")
-    val OK_INTERCEPTOR_CHAIN = ClassName(PKG_OK, "Interceptor", "Chain")
-    val OK_RESPONSE = ClassName(PKG_OK, "Response")
-
     val LIST_OF = MemberName("kotlin.collections", "listOf")
-    val MUTABLE_MAP_OF = MemberName("kotlin.collections", "mutableMapOf")
-    val EXCEPTION = ClassName("kotlin", "Exception")
 }

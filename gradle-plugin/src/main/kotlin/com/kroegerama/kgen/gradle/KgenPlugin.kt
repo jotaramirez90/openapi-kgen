@@ -86,18 +86,12 @@ class KgenPlugin : Plugin<Project> {
     }
 
     private fun Project.addDependencies() = dependencies {
-        val moshi = "1.9.2"
-        add("implementation", "com.squareup.moshi:moshi:$moshi")
-        add("implementation", "com.squareup.moshi:moshi-adapters:$moshi")
-        add("kapt", "com.squareup.moshi:moshi-kotlin-codegen:$moshi")
-
         val okhttp = "4.4.1"
         add("implementation", "com.squareup.okhttp3:okhttp:$okhttp")
 
         val retrofit = "2.8.1"
         add("implementation", "com.squareup.retrofit2:retrofit:$retrofit")
-        add("implementation", "com.squareup.retrofit2:converter-moshi:$retrofit")
-        add("implementation", "com.squareup.retrofit2:converter-scalars:$retrofit")
+        add("implementation", "com.squareup.retrofit2:converter-gson:$retrofit")
     }
 
     private inline fun <reified T> ExtensionContainer.findByNameTyped(name: String): T? = findByName(name) as? T

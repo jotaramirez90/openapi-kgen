@@ -37,7 +37,6 @@ class PoetGeneratorSchemaHandler(
                 description?.let { addKdoc(it) }
             }
             primaryConstructor(prop)
-            addAnnotation(createJsonClassAnnotation())
         }
         val fSpec = poetFunSpec(name.simpleName.asFunctionName()) {
             receiver(typeName)
@@ -115,7 +114,6 @@ class PoetGeneratorSchemaHandler(
         }
         primaryConstructor(*propSpecs.toTypedArray())
         apply(block)
-        addAnnotation(createJsonClassAnnotation())
     }
 
     override fun Schema<*>.convertToParameters(required: Boolean, isMultipart: Boolean): List<ParameterSpecPair> {

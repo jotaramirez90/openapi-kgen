@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/Metadata.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/api/CardsApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/api/CardsUpdateApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/api/PetsApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/$Named.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardCvvResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardRegistrationRequest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardRegistrationResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardRequestData.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardResponseData.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CardsPanResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/CreditDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/DeliveryAddress.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/Error.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/ErrorMessage.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/GetCardsResponseBodyInner.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/GetCardsResponseBodyInnerBlockDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/GetCardsResponseBodyInnerCreditDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/GetCardsResponseBodyInnerPrepaidDetails.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/Pet.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/PinValidateRequest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/PublicKeyResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/UpdateCardLimit.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/build/generated/source/kgen/com/openbank/poc/swaggertemplate/models/UpdateCardRequest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/app/openapi.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../POCSwaggerTemplate/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/build.gradle.kts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/buildSrc/src/main/kotlin/Constants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/OptionSet.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/Util.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/model/OperationWithInfo.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/openapi/OpenAPIAnalyzer.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/openapi/OpenAPIExtensions.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/ApiFilesGenerator.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/BaseFilesGenerator.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/ModelFilesGenerator.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/PoetConstants.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/PoetGeneratorBase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/core/src/main/kotlin/com/kroegerama/kgen/poet/PoetGeneratorSchemaHandler.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/gradle-plugin/src/main/kotlin/com/kroegerama/kgen/gradle/KgenPlugin.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

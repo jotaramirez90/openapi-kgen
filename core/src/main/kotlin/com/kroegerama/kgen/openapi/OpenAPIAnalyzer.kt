@@ -11,6 +11,7 @@ import io.swagger.v3.oas.models.media.MapSchema
 import io.swagger.v3.oas.models.media.Schema
 import io.swagger.v3.oas.models.security.SecurityScheme
 import java.util.*
+import java.util.logging.Logger
 import kotlin.collections.HashSet
 
 @Suppress("JoinDeclarationAndAssignment")

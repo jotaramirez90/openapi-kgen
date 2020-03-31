@@ -23,7 +23,6 @@ interface IPoetGeneratorBase {
     fun createFieldAnnotation(name: String): AnnotationSpec
     fun createHttpMethodAnnotation(method: PathItem.HttpMethod, path: String): AnnotationSpec
     fun createJsonAnnotation(name: String): AnnotationSpec
-    fun createJsonClassAnnotation(): AnnotationSpec
 }
 
 class PoetGeneratorBase(
@@ -37,7 +36,11 @@ class PoetGeneratorBase(
         return this
     }
 
-    override fun prepareFileSpec(pkg: String, name: String, block: FileSpec.Builder.() -> Unit): FileSpec =
+    override fun prepareFileSpec(
+        pkg: String,
+        name: String,
+        block: FileSpec.Builder.() -> Unit
+    ): FileSpec =
         poetFile(pkg, name) {
             indent(" ".repeat(4))
             addHeader()
@@ -65,13 +68,7 @@ class PoetGeneratorBase(
         }
 
     override fun createJsonAnnotation(name: String) =
-        poetAnnotation(PoetConstants.MOSHI_JSON) {
-            addMember("name = %S", name)
+        poetAnnotation(PoetConstants.GSON_SERIALIZED) {
+            addMember("%S", name)
         }
-
-    override fun createJsonClassAnnotation() =
-        poetAnnotation(PoetConstants.MOSHI_JSON_CLASS) {
-            addMember("generateAdapter = true")
-        }
-
 }

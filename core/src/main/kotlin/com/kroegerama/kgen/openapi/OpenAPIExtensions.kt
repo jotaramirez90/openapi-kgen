@@ -20,7 +20,12 @@ fun OpenAPI.findSecurityScheme(name: String): SecurityScheme? =
     components?.securitySchemes?.getOrDefault(name, null)
 
 fun Schema<*>.mapToTypeName(): ClassName = when (this) {
-    is StringSchema -> STRING
+    is StringSchema -> when (format) {
+        null,
+        SchemaTypeUtil.DATE_FORMAT,
+        SchemaTypeUtil.DATE_TIME_FORMAT -> STRING
+        else -> throw IllegalStateException("Integer format not allowed: $format")
+    }
     is IntegerSchema -> when (format) {
         null -> INT
         SchemaTypeUtil.INTEGER32_FORMAT -> INT
@@ -42,6 +47,7 @@ fun Schema<*>.mapToTypeName(): ClassName = when (this) {
     is EmailSchema -> STRING
     is PasswordSchema -> STRING
     is UUIDSchema -> STRING
+    is DateSchema -> STRING
 
     else -> throw IllegalStateException("Schema not supported: ${this.type}")
 }

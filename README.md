@@ -191,15 +191,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
 
-    implementation "com.squareup.moshi:moshi:$moshi"
-    implementation "com.squareup.moshi:moshi-adapters:$moshi"
-    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi"
-
     implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
 
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation "com.squareup.retrofit2:converter-moshi:$retrofit"
-    implementation "com.squareup.retrofit2:converter-scalars:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
 }
 ```
 
